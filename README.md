@@ -4,7 +4,7 @@ Pipeline de ETL para processamento de dados de cervejarias usando Python, Apache
 # Summary
 1. [Introdução](#Introdução)
 
-2. [Passo a Passo Docker](#Passo-a-Passo-Instruções-Docker)
+2. [Passo a Passo Docker](#Passo-a-Passo-Docker)
    
  - [Instalação Docker](#Instalação-Docker)
  - [Configuração Docker Compose](#Configuração-Docker-Compose)
@@ -48,7 +48,7 @@ O objetivo é transformar dados de uma API em diferentes camadas do pipeline:
 
 </br></br></br></br></br></br>
 
-## Step-by-Step Instrodução ao Docker
+## Passo a Passo Docker
 **Vamos Navegar pelo projeto:**
 
 ```bash
