@@ -25,14 +25,6 @@ Pipeline de ETL para processamento de dados de cervejarias usando Python, Apache
 
 </br></br></br></br></br></br>
 
-
-
-
-
-
-
-
-</br></br></br></br></br></br>
 ## Introdução
 Este repositório contém um estudo de caso sobre um banco de dados de cervejarias por localização, onde você pode examinar todo o fluxo de trabalho de engenharia de dados. este projeto suporta todas as ferramentas abaixo:
 
