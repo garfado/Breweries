@@ -138,7 +138,6 @@ exit
 docker restart breweries_pipeline-webserver-1
 ```
 
-
 ## Estrutura do Repositório:
 
 * ├── dags/
@@ -155,3 +154,9 @@ docker restart breweries_pipeline-webserver-1
 * ├── README.md
 ---
 
+## Dependências do Projeto:
+
+* pandas==1.5.3
+* requests==2.28.2
+* apache-airflow==2.6.0
+---
