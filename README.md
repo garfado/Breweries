@@ -138,6 +138,14 @@ exit
 docker restart breweries_pipeline-webserver-1
 ```
 
+## Implementação da DAG
+Os scripts principais da DAG e de cada etapa do pipeline estão nos seguintes arquivos:
+Script principal que controla a DAG breweries_dag.py
+
+---
+
+
+
 ## Camada Bronze 
 
 Este script realiza a extração de dados da API pública de cervejarias (https://api.openbrewerydb.org/breweries)
