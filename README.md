@@ -1,10 +1,20 @@
 # Summary
-- [Introdução](#Introdução)
+1 - [Introdução](#Introdução)
 - [Step-by-Step Instructions Docker](#step-by-step-instructions-docker)
 - [Steps to Start Airflow Without Example DAGs](#steps-to-start-airflow-without-example-dags)
+
+
+
+
+
+
+
+
+
+
 </br></br></br></br></br></br>
 ## Introdução
-This repository contains a case study on a brewery database by location, where you can examine the entire data engineering workflow. The following tools were used:
+Este repositório contém um estudo de caso sobre um banco de dados de cervejarias por localização, onde você pode examinar todo o fluxo de trabalho de engenharia de dados. este projeto suporta todas as ferramentas abaixo:
 
 - <img src="https://static-00.iconduck.com/assets.00/airflow-icon-512x512-tpr318yf.png" alt="Airflow" width="25" style="vertical-align: middle;"/>  Airflow for orchestration
 - <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" alt="Docker" width="25" style="vertical-align: middle;"/>  Docker
@@ -12,6 +22,7 @@ This repository contains a case study on a brewery database by location, where y
 - <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Databricks_Logo.png" alt="Databricks" width="25" style="vertical-align: middle;"/>  DataBricks
 - <img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" alt="Python" width="25" style="vertical-align: middle;"/>  Python for API requests
 - <img src="https://img.icons8.com/?size=100&id=WHRLQdbEXQ16&format=png&color=000000" alt="GCP" width="25" style="vertical-align: middle;"/>  GCP
+- <img src="https://img.icons8.com/?size=96&id=ThrCWrDxDa0v&format=png" lt="Azure" width="25" style="vertical-align: middle;"/> Azure
 
 
 
