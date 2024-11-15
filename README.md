@@ -5,7 +5,6 @@ Pipeline de ETL para processamento de dados de cervejarias usando Python, Apache
 1. [Introdução](#Introdução)
 
 2. [Passo a Passo Docker](#Passo-a-Passo-Docker)
-   
  - [Instalação Docker](#Instalação-Docker)
  - [Configuração Docker Compose](#Configuração-Docker-Compose)
  - [Executar Airflow](#Executar-Airflow
