@@ -3,13 +3,14 @@ Pipeline de ETL para processamento de dados de cervejarias usando Python, Apache
 
 # Summary
 1. [Introdução](#Introdução)
-- [Step-by-Step Instrodução ao Docker](#step-by-step-instructions-docker)
-- [Steps to Start Airflow Without Example DAGs](#steps-to-start-airflow-without-example-dags)
 
-2. [Passo a Passo Instruções Docker](#Passo-a-Passo-Instruções-Docker)
+2. [Passo a Passo Docker](#Passo-a-Passo-Instruções-Docker)
  - [Instalação Docker](#Instalação-Docker)
  - [Configuração Docker Compose](#Configuração-Docker-Compose)
- - [Executar Airflow](#Executar-Airflow)
+ - [Executar Airflow](#Executar-Airflow
+ - [Step-by-Step Instrodução ao Docker](#step-by-step-instructions-docker)
+ - [Steps to Start Airflow Without Example DAGs](#steps-to-start-airflow-without-example-dags)
+
 
 3. [Passo a Passo Airflow DAGs](#Passo-a-Passo-Airflow-DAGs)
 4. [Implementação da DAG](#Implementação-da-DAG)
@@ -36,7 +37,12 @@ Este repositório contém um estudo de caso sobre um banco de dados de cervejari
 - <img src="https://img.icons8.com/?size=100&id=WHRLQdbEXQ16&format=png&color=000000" alt="GCP" width="25" style="vertical-align: middle;"/>  GCP
 - <img src="https://img.icons8.com/?size=96&id=ThrCWrDxDa0v&format=png" lt="Azure" width="25" style="vertical-align: middle;"/> Azure
 
+Este projeto implementa um pipeline de ETL utilizando Airflow para processar dados de cervejarias. 
+O objetivo é transformar dados de uma API em diferentes camadas do pipeline:
 
+- **Bronze**: Dados brutos extraídos da API.
+- **Silver**: Dados limpos e tratados.
+- **Gold**: Dados finais prontos para análises e visualizações.
 
 </br></br></br></br></br></br>
 ## Step-by-Step Instrodução ao Docker
