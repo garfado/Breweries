@@ -142,6 +142,15 @@ docker restart breweries_pipeline-webserver-1
 Os scripts principais da DAG e de cada etapa do pipeline estão nos seguintes arquivos:
 Script principal que controla a DAG breweries_dag.py
 
+Seguencia principal DAG breweries 
+
+![image](https://github.com/user-attachments/assets/d849e9ce-4089-47f8-bf7e-e81a1bb29f73)
+
+
+Preview Breweries DAG.
+![image](https://github.com/user-attachments/assets/d40d0683-7f10-40fc-bad3-2c36cd20fba4)
+
+
 ---
 
 
