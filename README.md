@@ -48,29 +48,29 @@ Este repositório contém um estudo de caso sobre um banco de dados de cervejari
 </br>
 
 
-**⚠️ Warning:**
-If you are running this project on Windows using VS Code, ensure that the `start_airflow.sh` file is set to LF (Line Feed) line endings to avoid errors.
+**⚠️ Atenção:**
+Se você estiver executando este projeto no Windows usando o VS Code, certifique-se de que o arquivo start_airflow.sh esteja configurado com finais de linha no formato LF (Line Feed) para evitar erros.
 
 </br>
-**Start the Docker containers:**
+**Inicializando o containers Docker :**
 
 ```bash
 docker-compose up -d
 ```
 
-**Verify that the containers are running and Ensure you see two containers: one for Airflow and one for SQL Server.**
+**Verificando se o containers do Airflow e a Base de Dados estão inicializada.**
 
 ```bash
 docker ps
 ```
 
-**Access the Airflow container:**
+**Para acessar o Airflow container:**
 
 ```bash
-docker exec -it bees-data-engineering-breweries-case-airflow-1 sh
+docker exec -it breweries_pipeline-webserver-1 sh
 ```
 
-**Create an Airflow user: Inside the Airflow container, run the following command:**
+**Criar usuario do Airflow : Airflow container, Siga os passos abaixo:**
 <br/>
 This will create an admin user with the username admin and password admin.
 ```bash
@@ -83,32 +83,32 @@ airflow users create \
   --email admin@example.com
 ```
 
-**Exit the Airflow container:**
+**Para sair Airflow container:**
 ```bash
 exit
 ```
 
-**How to Stop and remove the Docker containers:**
+**procedimento para desativar Docker containers:**
 you can stop and remove the containers:
 
 ```bash
 docker-compose down
 ```
 </br></br></br></br></br></br>
-## Steps to Start Airflow Without Example DAGs**
-**Access the Airflow Container:**
+## Processo para dar Start Airflow um simples Examplo de DAGs**
+**para ter acesso ao Airflow Container:**
 ```bash
-docker exec -it bees-data-engineering-breweries-case-airflow-1 sh
+docker exec -it breweries_pipeline-webserver-1 sh
 ```
-**Find the Airflow Configuration File:**
+**Localizar o arquivo principal de configuracao do Airflow:**
 ```bash
 find / -name "airflow.cfg"
 ```
-**Edit the Airflow Configuration File:**
+**Editando o arquivo de configuração do Airflow:**
 ```bash
 vi /path/to/airflow.cfg
 ```
-**Disable the Example DAGs manually or with sed command line:**
+**Um breve exemplo de como desabilitar uma DAGs manualmente via linha de comando:**
 ```bash
 sed -i 's/load_examples = True/load_examples = False/' /path/to/airflow.cfg
 ```
@@ -116,17 +116,17 @@ sed -i 's/load_examples = True/load_examples = False/' /path/to/airflow.cfg
 **Restart Airflow:**
 ```bash
 exit
-docker restart bees-data-engineering-breweries-case-airflow-1
+docker restart breweries_pipeline-webserver-1
 ```
 
 
-**Re-enable the Example DAGs:**
+**Examplo de como habilitar uma DAGs:**
 </br>
 If you want to re-enable the example DAGs, change load_examples = False back to load_examples = True.
 
 ```bash
-docker exec -it bees-data-engineering-breweries-case-airflow-1 sh
+docker exec -it breweries_pipeline-webserver-1 sh
 sed -i 's/load_examples = False/load_examples = True/' /path/to/airflow.cfg
 exit
-docker restart bees-data-engineering-breweries-case-airflow-1
+docker restart breweries_pipeline-webserver-1
 ```
