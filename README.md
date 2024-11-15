@@ -6,10 +6,7 @@ Pipeline de ETL para processamento de dados de cervejarias usando Python, Apache
 - [Passo a Passo Docker](#step-by-step-instructions-docker)
 - [Steps to Start Airflow Without Example DAGs](#steps-to-start-airflow-without-example-dags)
 
-- [Introduction](#introduction)
-
-
-3. [Passo a Passo Instruções Docker](#Passo-a-Passo-Instruções-Docker)
+2. [Passo a Passo Instruções Docker](#Passo-a-Passo-Instruções-Docker)
  - [Instalação Docker](#Instalação-Docker)
  - [Configuração Docker Compose](#Configuração-Docker-Compose)
  - [Executar Airflow](#Executar-Airflow)
