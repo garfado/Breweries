@@ -9,8 +9,6 @@ Pipeline de ETL para processamento de dados de cervejarias usando Python, Apache
  - [Configuração Docker Compose](#Configuração-Docker-Compose)
  - [Executar Airflow-DAG](#Executar-Airflow-DAG)
 
-3. [Passo a Passo Airflow DAGs](#Passo-a-Passo-Airflow-DAGs)
-
 5. [Implementação da DAG](#Implementação-da-DAG)
 
 6. [Camadas do Pipeline](#Camadas-do-Pipeline)
