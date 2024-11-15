@@ -4,7 +4,7 @@
 - [Steps to Start Airflow Without Example DAGs](#steps-to-start-airflow-without-example-dags)
 
 # Summary
-- [Introdução](#Introdução)
+1. [Introdução](#Introdução)
 - [Step-by-Step Instructions Docker](#step-by-step-instructions-docker)
 - [Steps to Start Airflow Without Example DAGs](#steps-to-start-airflow-without-example-dags)
 
