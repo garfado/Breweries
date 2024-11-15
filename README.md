@@ -138,6 +138,16 @@ exit
 docker restart breweries_pipeline-webserver-1
 ```
 
+# Camada Bronze (API): fetch_breweries.py
+
+Este script realiza a extração de dados da API pública de cervejarias (https://api.openbrewerydb.org/breweries)
+e salva os dados brutos no formato JSON na camada Bronze. Ele inclui tratamento de erros, como falhas de conexão
+ou problemas no formato da resposta, e implementa um sistema de tentativas com backoff para garantir maior resiliência.
+O arquivo gerado é salvo com um timestamp único no diretório data/bronze.
+---
+
+
+
 ## Estrutura do Repositório:
 
 * ├── dags/
