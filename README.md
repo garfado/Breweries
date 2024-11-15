@@ -9,16 +9,16 @@ Pipeline de ETL para processamento de dados de cervejarias usando Python, Apache
  - [Configuração Docker Compose](#Configuração-Docker-Compose)
  - [Executar Airflow-DAG](#Executar-Airflow-DAG)
 
-5. [Implementação da DAG](#Implementação-da-DAG)
+3. [Implementação da DAG](#Implementação-da-DAG)
 
-6. [Camadas do Pipeline](#Camadas-do-Pipeline)
+4. [Camadas do Pipeline](#Camadas-do-Pipeline)
  - [Camada Bronze](#Camada-Bronze)
  - [Camada Silver](#Camada-Silver)
  - [Camada Gold](#Camada-Gold)
 
-6. [Estrutura do Repositório](#Estrutura-do-Repositório)
-7. [Dependências do Projeto](#Dependências-do-Projeto)
-8. [Objetivo e Justificativa](#Objetivo-e-Justificativa)
+5. [Estrutura do Repositório](#Estrutura-do-Repositório)
+6. [Dependências do Projeto](#Dependências-do-Projeto)
+7. [Objetivo e Justificativa](#Objetivo-e-Justificativa)
 
 </br></br></br></br></br></br>
 
