@@ -18,7 +18,7 @@ Pipeline de ETL para processamento de dados de cervejarias usando Python, Apache
 
 5. [Estrutura do Repositório](#Estrutura-do-Repositório)
 6. [Dependências do Projeto](#Dependências-do-Projeto)
-7. [Objetivo e Justificativa](#Objetivo-e-Justificativa)
+7. [Objetivo](#Objetivo)
 
 </br></br></br></br></br></br>
 
@@ -277,7 +277,7 @@ Preview Schemma de Dados
 * apache-airflow==2.6.0
 ---
 
-## Objetivo e Justificativa. 
+## Objetivo. 
 
 *  Aqui estão os pontos importantes que pode justificar este projeto entrar em produção:
 
