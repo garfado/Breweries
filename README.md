@@ -158,6 +158,7 @@ O arquivo gerado é salvo com um timestamp único no diretório data/bronze. Nom
  os dados ao longo das execuções e eliminando duplicatas com base no identificador único (id). 
  Além disso, inclui uma coluna de data_ingestao para rastrear a data da última ingestão.
  Nome do script que faz o tratamento de dadoa Camada Silver transform_breweries.py
+
 ---
 
 ## Camada Gold 
