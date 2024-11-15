@@ -160,3 +160,26 @@ docker restart breweries_pipeline-webserver-1
 * requests==2.28.2
 * apache-airflow==2.6.0
 ---
+
+## Objetivo e Justificativa. 
+
+*  Aqui estão os pontos importantes que pode justificar este projeto entrar em produção:
+
+* Modularidade e Reutilização de Código: Estruturamos o código para que cada tarefa na pipeline
+seja modular e reutilizável, facilitando manutenções e futuras adaptações.
+
+* Automação Inteligente com a lógica de buscar automaticamente o arquivo mais recente
+na camada Bronze e acumular dados na Silver, tornamos o processo mais robusto e menos sujeito a erros,
+uma otimização que agrega grande valor ao desafio.
+
+* Mecanismos de Controle e Logging: Com as implementações de logging e validação,
+foi criada uma camada extra de monitoramento que permite entender o status de cada etapa,
+além de capturar e tratar erros de forma mais amigável. Isso traz confiabilidade e torna o sistema mais sustentável.
+
+* Customização Avançada com Airflow: foi aplicado no Airflow os parametros XComs e controle de dependências e catchup
+para evitar reprocessamentos automáticos indesejados, com isto a plataforma vai ser aplicada em produção de forma segura.
+
+* Em resumo, o desafio busca um tratamento de dados e integração entre linguagns e orquestradores e integração com cloud,
+foi criado um pipeline robusto e adaptável pronto para um grande tratamento de dados e tranformação tudo de forma automatica.
+
+* Este pipeline, pode ser aplicado em ambientes com GCP - Azure e AWS.
