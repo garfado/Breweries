@@ -60,8 +60,11 @@ Se você estiver executando este projeto no Windows usando o VS Code, certifique
 ```bash
 docker-compose up -d
 ```
+</br>
+**Criando seu docker-compose.yaml
+
 ```bash
-version: '3.8' crie seu arquivo docker-compose.yaml
+version: '3.8' 
 services:
   postgres:
     image: postgres:13
@@ -115,9 +118,12 @@ volumes:
 
 **Verificando se o containers do Airflow e a Base de Dados estão inicializada.**
 
+---
+
 ```bash
 docker ps
-```
+---
+
 
 **Para acessar o Airflow container:**
 
