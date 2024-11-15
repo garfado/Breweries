@@ -156,7 +156,7 @@ docker-compose down
 ```bash
 docker exec -it breweries_pipeline-webserver-1 sh
 ```
-**Localizar o arquivo principal de configuracao do Airflow:**
+** Localizar o arquivo principal de configuracao do Airflow:**
 ```bash
 find / -name "airflow.cfg"
 ```
@@ -164,12 +164,12 @@ find / -name "airflow.cfg"
 ```bash
 vi /path/to/airflow.cfg
 ```
-**Um breve exemplo de como desabilitar uma DAGs manualmente via linha de comando:**
+** Um breve exemplo de como desabilitar uma DAGs manualmente via linha de comando:**
 ```bash
 sed -i 's/load_examples = True/load_examples = False/' /path/to/airflow.cfg
 ```
 
-**Restart Airflow:**
+** Restart Airflow:**
 ```bash
 exit
 docker restart breweries_pipeline-webserver-1
@@ -178,7 +178,7 @@ docker restart breweries_pipeline-webserver-1
 
 ## Executar Airflow-DAG
 </br>
-Se voce deseja criar uma DAG de examplo, altere os exemplos atuais, abaixo um exemplo.
+Se voce deseja criar uma DAG de exemplo, altere os exemplos atuais, abaixo um exemplo.
 
 ```bash
 docker exec -it breweries_pipeline-webserver-1 sh
