@@ -103,7 +103,8 @@ you can stop and remove the containers:
 docker-compose down
 ```
 </br></br></br></br></br></br>
-## Processo para dar Start Airflow um simples Examplo de DAGs**
+
+## Configuração Docker Compose 
 **para ter acesso ao Airflow Container:**
 ```bash
 docker exec -it breweries_pipeline-webserver-1 sh
