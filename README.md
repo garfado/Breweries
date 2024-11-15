@@ -1,5 +1,4 @@
 # Breweries Pipeline
-
 Pipeline de ETL para processamento de dados de cervejarias usando Python, Apache Airflow e Docker.
 
 ---
@@ -118,10 +117,9 @@ Objetivo: Preparar os dados em um formato consolidado, pronto para consumo em an
 * requests==2.28.2
 * apache-airflow==2.6.0
 
-
 # Objetivo do Desafio realizado com sucesso. 
 
-*  Aqui estão os pontos que acredito que aprimoraram o projeto para um nível mais alto:
+*  Aqui estão os pontos importantes que pode justificar este projeto entrar em produção:
 
 * Modularidade e Reutilização de Código: Estruturamos o código para que cada tarefa na pipeline
 seja modular e reutilizável, facilitando manutenções e futuras adaptações.
@@ -140,9 +138,3 @@ plataforma e atende a um desafio mais realista em produção.
 
 * Em resumo, o desafio original tinha algumas pegadinhas, este pipeline robusto e adaptável pronto para um grande tratamento
 de dados e tranformação.
-
-
-
-
-
-
