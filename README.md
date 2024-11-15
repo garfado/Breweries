@@ -116,20 +116,19 @@ services:
 volumes:
   postgres_db_volume:
 
-**Verificando se o containers do Airflow e a Base de Dados estão inicializada.**
+```
 
----
+**Verificando se o containers do Airflow e a Base de Dados estão inicializada.**
 
 ```bash
 docker ps
----
+
 
 
 **Para acessar o Airflow container:**
 
 ```bash
 docker exec -it breweries_pipeline-webserver-1 sh
-```
 
 **Criar usuario do Airflow : Airflow container, Siga os passos abaixo:**
 <br/>
