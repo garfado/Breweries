@@ -131,7 +131,7 @@ docker restart breweries_pipeline-webserver-1
 
 ## Executar Airflow-DAG
 </br>
-If you want to re-enable the example DAGs, change load_examples = False back to load_examples = True.
+Se voce deseja criar uma DAG de examplo, altere os exemplos atuais, abaixo um exemplo.
 
 ```bash
 docker exec -it breweries_pipeline-webserver-1 sh
