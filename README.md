@@ -149,15 +149,16 @@ O arquivo gerado é salvo com um timestamp único no diretório data/bronze. Nom
 
 ## Camada Silver 
 
-Este script transforma os dados brutos extraídos da camada Bronze para a camada Silver. 
-Ele realiza limpeza, tratamento e padronização dos dados como: Seleção de colunas relevantes.
-Tratamento de valores ausentes, substituindo por padrões como "unknown".
-Ajustes no formato de texto (ex.: capitalização de estados e cidades).
-Conversão de tipos de dados, como longitude e latitude.
-Os dados tratados são salvos em um arquivo Parquet no diretório data/silver, acumulando 
-os dados ao longo das execuções e eliminando duplicatas com base no identificador único (id). 
-Além disso, inclui uma coluna de data_ingestao para rastrear a data da última ingestão.
-Nome do script que faz o tratamento de dadoa Camada Silver transform_breweries.py
+ Este script transforma os dados brutos extraídos da camada Bronze para a camada Silver. 
+ Ele realiza limpeza, tratamento e padronização dos dados como: Seleção de colunas relevantes.
+ Tratamento de valores ausentes, substituindo por padrões como "unknown".
+ Ajustes no formato de texto (ex.: capitalização de estados e cidades).
+ Conversão de tipos de dados, como longitude e latitude.
+ Os dados tratados são salvos em um arquivo Parquet no diretório data/silver, acumulando 
+ os dados ao longo das execuções e eliminando duplicatas com base no identificador único (id). 
+ Além disso, inclui uma coluna de data_ingestao para rastrear a data da última ingestão.
+ Nome do script que faz o tratamento de dadoa Camada Silver transform_breweries.py
+
 ---
 
 
