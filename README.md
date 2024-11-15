@@ -110,7 +110,7 @@ Objetivo: Preparar os dados em um formato consolidado, pronto para consumo em an
 ![image](https://github.com/user-attachments/assets/b0c384e2-f14c-450c-a5e0-1e6b96300f8d)
 
 
-# Estrutura do Repositório:
+## Estrutura do Repositório:
 
 * ├── dags/
 * │   ├── breweries_dag.py
@@ -125,13 +125,13 @@ Objetivo: Preparar os dados em um formato consolidado, pronto para consumo em an
 * ├── docker-compose.yaml
 * ├── README.md
 
-# Dependências do projeto, como pandas, requests, apache-airflow, para facilitar a instalação:
+## Dependências do projeto, como pandas, requests, apache-airflow, para facilitar a instalação:
 
 * pandas==1.5.3
 * requests==2.28.2
 * apache-airflow==2.6.0
 
-# Objetivo do Desafio realizado com sucesso. 
+## Objetivo do Desafio realizado com sucesso. 
 
 *  Aqui estão os pontos importantes que pode justificar este projeto entrar em produção:
 
