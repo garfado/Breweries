@@ -65,14 +65,38 @@ Os scripts principais da DAG e de cada etapa do pipeline estão nos seguintes ar
 ## Implementação DAG: breweries_dag.py
 
 Os scripts principais da DAG e de cada etapa do pipeline estão nos seguintes arquivos:
-
-* Camada Bronze (API): fetch_breweries.py
-* Camada Silver (Transformação): transform_breweries.py
-* Camada Gold (Agregação): aggregate_breweries.py
-
 Cada arquivo contém comentários detalhados e uma explicação de cada etapa.
 
-# Objetivo do desafio 100% realizado com sucesso com upgrade. 
+
+* Camada Bronze (API): fetch_breweries.py
+
+Este script realiza a extração de dados da API pública de cervejarias (https://api.openbrewerydb.org/breweries)
+e salva os dados brutos no formato JSON na camada Bronze. Ele inclui tratamento de erros, como falhas de conexão
+ou problemas no formato da resposta, e implementa um sistema de tentativas com backoff para garantir maior resiliência.
+O arquivo gerado é salvo com um timestamp único no diretório data/bronze.
+  
+* Camada Silver (Transformação): transform_breweries.py
+
+Este script transforma os dados brutos extraídos da camada Bronze para a camada Silver. 
+Ele realiza limpeza, tratamento e padronização dos dados, 
+como: Seleção de colunas relevantes.
+Tratamento de valores ausentes, substituindo por padrões como "unknown".
+Ajustes no formato de texto (ex.: capitalização de estados e cidades).
+Conversão de tipos de dados, como longitude e latitude.
+Os dados tratados são salvos em um arquivo Parquet no diretório data/silver, acumulando 
+os dados ao longo das execuções e eliminando duplicatas com base no identificador único (id). 
+Além disso, inclui uma coluna de data_ingestao para rastrear a data da última ingestão.
+
+* Camada Gold (Agregação): aggregate_breweries.py
+
+Este script realiza a agregação dos dados processados na camada Silver, consolidando informações para análises finais:
+
+Busca o arquivo mais recente na camada Silver: Identifica o arquivo Parquet mais recente que contém os dados já limpos e transformados.
+Realiza a agregação: Agrupa as cervejarias por estado e tipo, gerando uma contagem do número de cervejarias em cada categoria.
+Salva os dados agregados na camada Gold: Os resultados são exportados em formato Parquet, com um nome único baseado no timestamp.
+Objetivo: Preparar os dados em um formato consolidado, pronto para consumo em análises ou visualizações.
+
+# Objetivo do Desafio realizado com sucesso. 
 
 *  Aqui estão os pontos que acredito que aprimoraram o projeto para um nível mais alto:
 
@@ -92,7 +116,7 @@ para evitar reprocessamentos automáticos indesejados, o que reflete um domínio
 plataforma e atende a um desafio mais realista em produção.
 
 * Em resumo, o desafio original tinha algumas pegadinhas, este pipeline robusto e adaptável pronto para um grande tratamento
-de dados e tranformacao.
+de dados e tranformação.
 
 
 
