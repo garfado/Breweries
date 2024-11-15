@@ -33,13 +33,6 @@ Este repositório contém um estudo de caso sobre um banco de dados de cervejari
 - <img src="https://img.icons8.com/?size=100&id=WHRLQdbEXQ16&format=png&color=000000" alt="GCP" width="25" style="vertical-align: middle;"/>  GCP
 - <img src="https://img.icons8.com/?size=96&id=ThrCWrDxDa0v&format=png" lt="Azure" width="25" style="vertical-align: middle;"/> Azure
 
-Este projeto implementa um pipeline de ETL utilizando Airflow para processar dados de cervejarias. 
-O objetivo é transformar dados de uma API em diferentes camadas do pipeline:
-
-- **Bronze**: Dados brutos extraídos da API.
-- **Silver**: Dados limpos e tratados.
-- **Gold**: Dados finais prontos para análises e visualizações.
-
 </br></br></br></br></br></br>
 
 ## Passo a Passo Docker
@@ -207,6 +200,16 @@ Preview Breweries DAG.
 ![image](https://github.com/user-attachments/assets/d40d0683-7f10-40fc-bad3-2c36cd20fba4)
 
 ---
+
+## Camadas do Pipeline
+Este projeto implementa um pipeline de ETL utilizando Airflow para processar dados de cervejarias. 
+O objetivo é transformar dados de uma API em diferentes camadas do pipeline:
+
+- **Bronze**: Dados brutos extraídos da API.
+- **Silver**: Dados limpos e tratados.
+- **Gold**: Dados finais prontos para análises e visualizações.
+
+----
 
 ## Camada Bronze 
 
