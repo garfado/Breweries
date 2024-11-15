@@ -4,12 +4,12 @@ Pipeline de ETL para processamento de dados de cervejarias usando Python, Apache
 ---
 
 ## Summary
-1. [Introduction](#introduction)
-2. [Step-by-Step Instructions Docker](#step-by-step-instructions-docker)
-   - [Install Docker](#install-docker)
-   - [Setup Docker Compose](#setup-docker-compose)
-   - [Running the Airflow Environment](#running-the-airflow-environment)
-3. [Steps to Start Airflow Without Example DAGs](#steps-to-start-airflow-without-example-dags)
+1. [Introdução](#introduction)
+2. [Passo a Passo Instruções Docker](#step-by-step-instructions-docker)
+   - [Instalação Docker](#install-docker)
+   - [configuração Docker Compose](#setup-docker-compose)
+   - [Executar Airflow ](#running-the-airflow-environment)
+3. [Passo a Passo Airflow DAGs](#steps-to-start-airflow-without-example-dags)
 4. [Implementação da DAG](#implementação-da-dag)
 
 ---
@@ -86,6 +86,13 @@ Os dados tratados são salvos em um arquivo Parquet no diretório data/silver, a
 os dados ao longo das execuções e eliminando duplicatas com base no identificador único (id). 
 Além disso, inclui uma coluna de data_ingestao para rastrear a data da última ingestão.
 
+# Preview Camada Dataframe Silver - script - check_dataframe_silver.py
+
+![image](https://github.com/user-attachments/assets/e7b6e18f-1ed5-424c-b932-7be2bd245eff)
+
+![image](https://github.com/user-attachments/assets/9eb04bff-c820-4050-bac0-1341aa7ea7b8)
+
+
 * Camada Gold (Agregação): aggregate_breweries.py
 
 Este script realiza a agregação dos dados processados na camada Silver, consolidando informações para análises finais:
@@ -94,6 +101,13 @@ Busca o arquivo mais recente na camada Silver: Identifica o arquivo Parquet mais
 Realiza a agregação: Agrupa as cervejarias por estado e tipo, gerando uma contagem do número de cervejarias em cada categoria.
 Salva os dados agregados na camada Gold: Os resultados são exportados em formato Parquet, com um nome único baseado no timestamp.
 Objetivo: Preparar os dados em um formato consolidado, pronto para consumo em análises ou visualizações.
+
+# Preview Camada Dataframe Gold - script - check_dataframe_gold.py
+
+![image](https://github.com/user-attachments/assets/710bfe74-0a96-4732-8df6-4d268426845e)
+
+# Preview Schemma de Dados
+![image](https://github.com/user-attachments/assets/b0c384e2-f14c-450c-a5e0-1e6b96300f8d)
 
 
 # Estrutura do Repositório:
@@ -124,17 +138,18 @@ Objetivo: Preparar os dados em um formato consolidado, pronto para consumo em an
 * Modularidade e Reutilização de Código: Estruturamos o código para que cada tarefa na pipeline
 seja modular e reutilizável, facilitando manutenções e futuras adaptações.
 
-* Automação Inteligente e Organização: Com a lógica de buscar automaticamente o arquivo mais recente
+* Automação Inteligente com a lógica de buscar automaticamente o arquivo mais recente
 na camada Bronze e acumular dados na Silver, tornamos o processo mais robusto e menos sujeito a erros,
 uma otimização que agrega grande valor ao desafio.
 
 * Mecanismos de Controle e Logging: Com as implementações de logging e validação,
-criamos uma camada extra de monitoramento que permite entender o status de cada etapa,
+foi criada uma camada extra de monitoramento que permite entender o status de cada etapa,
 além de capturar e tratar erros de forma mais amigável. Isso traz confiabilidade e torna o sistema mais sustentável.
 
-* Customização Avançada com Airflow: Incorporamos recursos do Airflow, como XComs, controle de dependências e catchup
-para evitar reprocessamentos automáticos indesejados, o que reflete um domínio completo sobre a
-plataforma e atende a um desafio mais realista em produção.
+* Customização Avançada com Airflow: foi aplicado no Airflow os parametros XComs e controle de dependências e catchup
+para evitar reprocessamentos automáticos indesejados, com isto a plataforma vai ser aplicada em produção de forma segura.
 
-* Em resumo, o desafio original tinha algumas pegadinhas, este pipeline robusto e adaptável pronto para um grande tratamento
-de dados e tranformação.
+* Em resumo, o desafio busca um tratamento de dados e integração entre linguagns e orquestradores e integração com cloud,
+foi criado um pipeline robusto e adaptável pronto para um grande tratamento de dados e tranformação tudo de forma automatica.
+
+* Este pipeline, pode ser aplicado em ambientes com GCP - Azure e AWS.
