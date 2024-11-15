@@ -4,7 +4,7 @@ Pipeline de ETL para processamento de dados de cervejarias usando Python, Apache
 ---
 
 #Summary
-1. [Introdução](#Introducao)
+1. [Introdução](#Introdução)
 
 2. [Passo a Passo Instruções Docker](#Passo-a-Passo-Instruções-Docker)
  - [Instalação Docker](#Instalação-Docker)
@@ -25,7 +25,7 @@ Pipeline de ETL para processamento de dados de cervejarias usando Python, Apache
 
 ---
 
-# Introdução
+#Introdução
 
 Este projeto implementa um pipeline de ETL utilizando Airflow para processar dados de cervejarias. 
 O objetivo é transformar dados de uma API em diferentes camadas do pipeline:
