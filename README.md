@@ -152,10 +152,7 @@ Seguencia principal DAG breweries
 Preview Breweries DAG.
 ![image](https://github.com/user-attachments/assets/d40d0683-7f10-40fc-bad3-2c36cd20fba4)
 
-
 ---
-
-
 
 ## Camada Bronze 
 
@@ -198,10 +195,7 @@ Preview Camada Dataframe Gold - script - check_dataframe_gold.py
 Preview Schemma de Dados
 ![image](https://github.com/user-attachments/assets/b0c384e2-f14c-450c-a5e0-1e6b96300f8d)
 
-
 ---
-
-
 
 ## Estrutura do Repositório:
 
