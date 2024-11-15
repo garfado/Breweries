@@ -39,11 +39,11 @@ Este repositório contém um estudo de caso sobre um banco de dados de cervejari
 
 
 </br></br></br></br></br></br>
-## Step-by-Step Instructions Docker
-**Navigate to the project directory:**
+## Step-by-Step Instrodução ao Docker
+**Vamos Navegar pelo projeto:**
 
 ```bash
-   cd ~/bees-data-engineering-breweries-case
+   cd /breweries_pipeline/
 ```
 </br>
 
