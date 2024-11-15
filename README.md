@@ -96,6 +96,29 @@ Realiza a agregação: Agrupa as cervejarias por estado e tipo, gerando uma cont
 Salva os dados agregados na camada Gold: Os resultados são exportados em formato Parquet, com um nome único baseado no timestamp.
 Objetivo: Preparar os dados em um formato consolidado, pronto para consumo em análises ou visualizações.
 
+
+# Estrutura do Repositório:
+
+* ├── dags/
+* │   ├── breweries_dag.py
+* │   ├── scripts/
+* │       ├── fetch_breweries.py
+* │       ├── transform_breweries.py
+* │       ├── aggregate_breweries.py
+* ├── data/
+* │   ├── bronze/
+* │   ├── silver/
+* │   ├── gold/
+* ├── docker-compose.yaml
+* ├── README.md
+
+# Dependências do projeto, como pandas, requests, apache-airflow, para facilitar a instalação:
+
+* pandas==1.5.3
+* requests==2.28.2
+* apache-airflow==2.6.0
+
+
 # Objetivo do Desafio realizado com sucesso. 
 
 *  Aqui estão os pontos que acredito que aprimoraram o projeto para um nível mais alto:
