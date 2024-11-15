@@ -60,6 +60,58 @@ Se você estiver executando este projeto no Windows usando o VS Code, certifique
 ```bash
 docker-compose up -d
 ```
+```bash
+version: '3.8' crie seu arquivo docker-compose.yaml
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres_db_volume:/var/lib/postgresql/data
+
+  webserver:
+    image: apache/airflow:2.3.3
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__WEBSERVER__DEFAULT_UI_USER: admin
+      AIRFLOW__WEBSERVER__DEFAULT_UI_PASSWORD: admin
+      AIRFLOW__WEBSERVER__SECRET_KEY: '102030'
+      AIRFLOW__WEBSERVER__BASE_URL: 'http://webserver:8080'  # URL base definida
+      PYTHONPATH: /opt/airflow/dags
+      TZ: America/Sao_Paulo  # Ajuste do fuso horário
+    depends_on:
+      - postgres
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs  # Montagem dos logs
+    ports:
+      - "8080:8080"
+    command: webserver
+
+  scheduler:
+    image: apache/airflow:2.3.3
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__WEBSERVER__SECRET_KEY: '102030'
+      AIRFLOW__WEBSERVER__BASE_URL: 'http://webserver:8080'  # URL base alinhada com o webserver
+      PYTHONPATH: /opt/airflow/dags
+      TZ: America/Sao_Paulo  # Ajuste do fuso horário
+    depends_on:
+      - postgres
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs  # Montagem dos logs para acesso pelo scheduler
+    command: scheduler
+
+volumes:
+  postgres_db_volume:
 
 **Verificando se o containers do Airflow e a Base de Dados estão inicializada.**
 
