@@ -45,6 +45,7 @@ O objetivo é transformar dados de uma API em diferentes camadas do pipeline:
 - **Gold**: Dados finais prontos para análises e visualizações.
 
 </br></br></br></br></br></br>
+
 ## Step-by-Step Instrodução ao Docker
 **Vamos Navegar pelo projeto:**
 
@@ -136,3 +137,21 @@ sed -i 's/load_examples = False/load_examples = True/' /path/to/airflow.cfg
 exit
 docker restart breweries_pipeline-webserver-1
 ```
+
+
+## Estrutura do Repositório:
+
+* ├── dags/
+* │   ├── breweries_dag.py
+* │   ├── scripts/
+* │       ├── fetch_breweries.py
+* │       ├── transform_breweries.py
+* │       ├── aggregate_breweries.py
+* ├── data/
+* │   ├── bronze/
+* │   ├── silver/
+* │   ├── gold/
+* ├── docker-compose.yaml
+* ├── README.md
+---
+
