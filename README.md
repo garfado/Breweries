@@ -166,6 +166,13 @@ O arquivo gerado é salvo com um timestamp único no diretório data/bronze. Nom
 Este script realiza a agregação dos dados processados na camada Silver, consolidando informações para análises finais:
 Busca o arquivo mais recente na camada Silver: Identifica o arquivo Parquet mais recente que contém os dados já limpos e transformados. Realiza a agregação: Agrupa as cervejarias por estado e tipo, gerando uma contagem do número de cervejarias em cada categoria. Salva os dados agregados na camada Gold: Os resultados são exportados em formato Parquet, com um nome único baseado no timestamp. Objetivo: Preparar os dados em um formato consolidado, pronto para consumo em análises ou visualizações.
 
+Preview Camada Dataframe Gold - script - check_dataframe_gold.py
+![image](https://github.com/user-attachments/assets/710bfe74-0a96-4732-8df6-4d268426845e)
+
+Preview Schemma de Dados
+![image](https://github.com/user-attachments/assets/b0c384e2-f14c-450c-a5e0-1e6b96300f8d)
+
+
 ---
 
 
