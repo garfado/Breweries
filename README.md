@@ -7,7 +7,7 @@ Pipeline de ETL para processamento de dados de cervejarias usando Python, Apache
 2. [Passo a Passo Docker](#Passo-a-Passo-Docker)
  - [Instalação Docker](#Instalação-Docker)
  - [Configuração Docker Compose](#Configuração-Docker-Compose)
- - [Executar Airflow](#Executar-Airflow
+ - [Executar Airflow-DAG](#Executar-Airflow-DAG)
  - [Step-by-Step Instrodução ao Docker](#step-by-step-instructions-docker)
  - [Steps to Start Airflow Without Example DAGs](#steps-to-start-airflow-without-example-dags)
 
@@ -129,7 +129,7 @@ docker restart breweries_pipeline-webserver-1
 ```
 
 
-**Examplo de como habilitar uma DAGs:**
+** Executar Airflow-DAG
 </br>
 If you want to re-enable the example DAGs, change load_examples = False back to load_examples = True.
 
