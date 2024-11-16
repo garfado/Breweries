@@ -43,7 +43,6 @@ Este repositório contém um estudo de caso sobre um banco de dados de cervejari
 ```
 </br>
 
-
 **⚠️ Atenção:**
 Se você estiver executando este projeto no Windows usando o VS Code, certifique-se de que o arquivo start_airflow.sh esteja configurado com finais de linha no formato LF (Line Feed) para evitar erros.
 
@@ -277,7 +276,7 @@ Preview Schemma de Dados
 * apache-airflow==2.6.0
 ---
 
-## Objetivo. 
+## Objetivo 
 
 *  Aqui estão os pontos importantes que pode justificar este projeto entrar em produção:
 
