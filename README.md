@@ -112,7 +112,7 @@ volumes:
 ```
 
 </br>
-**Verificando se o containers do Airflow e a Base de Dados estão inicializada:**
+**Verificando se o containers do Airflow e a Base de Dados estão inicializada:*
 
 ```bash
 docker ps
